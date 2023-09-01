@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@700&family=Noto+Serif+Display:ital,wght@1,100&family=Oswald&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oswald";
+}
+
+body {
+  background-color: #212025;
+}
+
+.title-header {
+  margin: 15px;
+  text-align: center;
+  color: white;
+}
+
+.enter-button {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container-main {
+  width: 100%;
+  margin: auto;
+  display: flex; /*para poner las card una al lado de la otra */
+  flex-wrap: wrap; /* para que maneje la parte de responsive y se ponga una debajo de la otra a la hora de achicar la pagina */
+  justify-content: center;
+}
+
+.card {
+  width: 450px;
+  margin: 50px;
+  padding: 20px;
+  border: solid 1px;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* .cover-card {
+  width: 100%; /* ancho de la card */
+/* height: 200px; /* altura de la card*/
+/*} */
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.card h2 {
+  font-size: 25px;
+  color: white;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+  background-color: #212025;
+  border: 0;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+}
