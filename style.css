@@ -8,19 +8,17 @@
 }
 
 body {
-  background-color: #212025;
+  background-color: #646464;
 }
 
 .title-header {
   margin: 15px;
+  margin-top: 50px;
   text-align: center;
   color: white;
 }
 
-.enter-button {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
+/* contenedor de las cards */
 .container-main {
   width: 100%;
   margin: auto;
@@ -39,24 +37,23 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* .cover-card {
-  width: 100%; /* ancho de la card */
-/* height: 200px; /* altura de la card*/
-/*} */
-
+/* imagenes dentro de las cards */
 img {
   width: 100%;
   border-radius: 15px;
 }
 
-.card h2 {
+/* titulos de las cards */
+.card h3 {
   font-size: 25px;
   color: white;
 }
 
+/* botones en general */
 button {
-  width: 80px;
-  height: 30px;
+  margin-top: 5px;
+  width: 110px;
+  height: 40px;
   background-color: #212025;
   border: 0;
   border-radius: 10px;
@@ -71,10 +68,62 @@ button:hover {
 
 input {
   width: 200px;
-  height: 30px;
-  border: none;
+  height: 40px;
+  border: 0;
   border-radius: 8px;
-  padding: 5px;
-  font-size: 15px;
+  padding: 10px;
+  font-size: 20px;
   outline: none;
+}
+
+/* agregando estilos para el modal */
+
+/* Fondo modal: negro con opacidad al 50% */
+.modal {
+  display: none; /* Por defecto, estará oculto */
+  position: fixed; /* Posición fija */
+  z-index: 1; /* Se situará por encima de otros elementos de la página*/
+  padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Algura completa */
+  overflow: auto; /* Se activará el scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
+}
+
+/* Ventana o caja modal */
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.918);
+  width: 500px;
+  padding: 40px 50px;
+  border-radius: 15px;
+  border: solid 1px;
+  position: relative; /* Relativo con respecto al contenedor -modal- */
+  margin: auto; /* Centrada */
+}
+
+/* titulo del modal */
+h2 {
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+/* boton de ingresar vehiculo dentro del modal */
+.boton-ingresar-vehiculo {
+  margin-left: 10px;
+}
+/* boton de cerrar modal */
+.cerrar {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.boton-buscar {
+  margin-left: 10px;
+}
+
+/* boton de seleccion de vehiculo */
+.boton-seleccion-vehiculo {
+  margin-left: 10px;
 }

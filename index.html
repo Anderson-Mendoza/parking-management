@@ -4,16 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/parking-management/style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Parking Management</title>
-    <link rel="icon" href="/parking-management/img/parking-icon.jpg">
+    <link rel="icon" href="/img/parking-icon.jpg">
 </head>
 
 <body>
     <header class="title-header">
         <h1> PARKING MANAGEMENT</h1>
-        <div>
-            <button class="enter-button" id="enter-vehicles">Enter vehicle</button>
+        <button class="enter-button" id="abrirModal"> &#X1F698; Enter Vehicle</button>
+
+        <!-- Ventana modal, por defecto no visiblel -->
+        <div id="ventanaModal" class="modal">
+            <div class="modal-content">
+                <h2> &#x1F697; Enter vehicles</h2>
+                <input type="text" value="plate">
+                <button class="boton-seleccion-vehiculo"> &#x1F6F5; bike or car &#x1F697;</button>
+                <button class="boton-ingresar-vehiculo"> &#x1F51D; Enter</button>
+                <button class="cerrar"> &#X274C; close</button>
+            </div>
         </div>
     </header>
 
@@ -21,9 +30,9 @@
         <section class="column-1">
             <div class="card">
                 <div class="cover-card">
-                    <img src="/parking-management/img/entrada-vehiculos.png" alt="entrada de vehiculos">
+                    <img src="img/entrada-vehiculos.png" alt="entrada de vehiculos">
                 </div>
-                <h2>List vehicles</h2>
+                <h3>List vehicles</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis accusamus error eveniet atque
                     mollitia saepe dolor perferendis minus perspiciatis, asperiores, eum velit ipsam ipsum minima quia
                     at. Eius, sit sunt?</p>
@@ -35,19 +44,18 @@
         <section class="column-2">
             <div class="card">
                 <div class="cover-card">
-                    <img src="/parking-management/img/salida-vehiculos-derecha.jpg" alt="salida de vehiculos">
+                    <img src="img/salida-vehiculos-derecha.jpg" alt="salida de vehiculos">
                 </div>
-                <h2>Vehicles exit</h2>
-                <button id="plate">Plate</button>
-                <input type="text">
-                <button id="Search">Search</button>
+                <h3>Vehicles exit</h3>
+                <input type="text" value="plate">
+                <button class="boton-buscar" id="Search"> &#X1F50D; Search</button>
             </div>
 
         </section>
     </main>
 
 
-    <script src="/parking-management/script.js"></script>
+    <script src="/script.js"></script>
 
 </body>
 
