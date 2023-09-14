@@ -18,14 +18,19 @@
         <div id="ventanaModal" class="modal">
             <div class="modal-content">
                 <h2> &#x1F697; Enter vehicles</h2>
-                <input type="text" value="plate">
-                <button class="boton-seleccion-vehiculo"> &#x1F6F5; bike or car &#x1F697;</button>
+                <select class="boton-seleccion-vehiculo" name="boton-seleccion-vehiculo" id="boton-seleccion-vehiculo">
+                    <option value="automovil"> &#x1F697; Car</option>
+                    <option value="motocicleta"> &#x1F6F5; Motorcycle </option>
+                    <option value="bicicleta"> &#x1F6B4; Bicycle </option>
+                </select>
+                <input type="text" placeholder="plate">
                 <button class="boton-ingresar-vehiculo"> &#x1F51D; Enter</button>
                 <button class="cerrar"> &#X274C; close</button>
             </div>
         </div>
     </header>
 
+    <!-- vista principal  -->
     <main class="container-main">
         <section class="column-1">
             <div class="card">
@@ -47,7 +52,7 @@
                     <img src="img/salida-vehiculos-derecha.jpg" alt="salida de vehiculos">
                 </div>
                 <h3>Vehicles exit</h3>
-                <input type="text" value="plate">
+                <input type="text" placeholder="plate">
                 <button class="boton-buscar" id="Search"> &#X1F50D; Search</button>
             </div>
 
@@ -56,7 +61,6 @@
 
 
     <script src="/script.js"></script>
-
 </body>
 
 </html>

@@ -52,12 +52,13 @@ img {
 /* botones en general */
 button {
   margin-top: 5px;
-  width: 110px;
+  width: 140px;
   height: 40px;
+  padding: 0;
   background-color: #212025;
   border: 0;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
   color: white;
 }
@@ -67,7 +68,7 @@ button:hover {
 }
 
 input {
-  width: 200px;
+  width: 150px;
   height: 40px;
   border: 0;
   border-radius: 8px;
@@ -95,7 +96,7 @@ input {
 /* Ventana o caja modal */
 .modal-content {
   background-color: rgba(0, 0, 0, 0.918);
-  width: 500px;
+  width: 600px;
   padding: 40px 50px;
   border-radius: 15px;
   border: solid 1px;
@@ -112,18 +113,31 @@ h2 {
 /* boton de ingresar vehiculo dentro del modal */
 .boton-ingresar-vehiculo {
   margin-left: 10px;
+  padding: 0;
+  font-size: 20px;
 }
 /* boton de cerrar modal */
 .cerrar {
   margin-top: 30px;
   margin-left: 10px;
+  padding: 0;
+  font-size: 20px;
 }
 
 .boton-buscar {
   margin-left: 10px;
+  padding: 0;
+  font-size: 20px;
 }
 
 /* boton de seleccion de vehiculo */
 .boton-seleccion-vehiculo {
-  margin-left: 10px;
+  width: 150px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 20px;
+  padding: 0;
+  outline: none;
 }
