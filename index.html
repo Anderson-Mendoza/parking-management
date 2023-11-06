@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Parking Management</title>
-    <link rel="icon" href="/img/parking-icon.jpg">
+    <link rel="icon" href="./img/parking-icon.jpg">
 </head>
 
 <body>
@@ -18,14 +18,14 @@
         <div id="ventanaModal" class="modal">
             <div class="modal-content">
                 <h2> &#x1F697; Enter vehicles</h2>
-                <select class="boton-seleccion-vehiculo" name="boton-seleccion-vehiculo" id="boton-seleccion-vehiculo">
-                    <option value="automovil"> &#x1F697; Car</option>
-                    <option value="motocicleta"> &#x1F6F5; Motorcycle </option>
-                    <option value="bicicleta"> &#x1F6B4; Bicycle </option>
+                <select id="boton-seleccion-vehiculo" class="boton-seleccion-vehiculo" name="boton-seleccion-vehiculo" >
+                    <option id="car" value="Car"> &#x1F697; Car</option>
+                    <option id="motorcycle" value="Motorcycle"> &#x1F6F5; Motorcycle </option>
+                    <!-- <option id="bicycle" value="Bicycle"> &#x1F6B4; Bicycle </option> -->
                 </select>
-                <input type="text" placeholder="plate">
-                <button class="boton-ingresar-vehiculo"> &#x1F51D; Enter</button>
-                <button class="cerrar"> &#X274C; close</button>
+                <input id="ingresar-placa-vehiculo" type="text" placeholder="plate">
+                <button id="boton-ingresar-vehiculo" class="boton-ingresar-vehiculo"> &#x1F51D; Enter</button>
+                <button id="boton-cerrar-modal"  class="cerrar"> &#X274C; close</button>
             </div>
         </div>
     </header>
@@ -38,12 +38,22 @@
                     <img src="img/entrada-vehiculos.png" alt="entrada de vehiculos">
                 </div>
                 <h3>List vehicles</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis accusamus error eveniet atque
-                    mollitia saepe dolor perferendis minus perspiciatis, asperiores, eum velit ipsam ipsum minima quia
-                    at. Eius, sit sunt?</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi incidunt ea tempora totam maiores
-                    nihil ullam ex eaque necessitatibus consequuntur deleniti ipsum, ipsa soluta pariatur doloribus
-                    tempore, harum, laudantium laboriosam.</p>
+
+                <section  class="info-type-time">
+                    <div>
+                        <p class="name-list-vehicle">Tipo - Placa</p>
+                    </div>
+                    <div >
+                        <p class="name-data-vehicle">hora - fecha</p>
+                    </div>
+                </section>
+
+               <section class="container-data-vehicles">
+                <ul id="vehicles-list" class="vehicles" >
+                </ul>
+               </section>
+                       
+               
             </div>
         </section>
         <section class="column-2">
@@ -59,8 +69,10 @@
         </section>
     </main>
 
-
-    <script src="/script.js"></script>
+     <script src="./modal.js"></script>
+     <script src="./constants_id.js"></script>
+     <script src="./script.js"></script>
+    
 </body>
 
 </html>

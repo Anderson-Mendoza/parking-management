@@ -1,25 +1,54 @@
-// Ventana modal
-var modal = document.getElementById("ventanaModal");
+listAllVehicles();
 
-// Botón que abre el modal
-var boton = document.getElementById("abrirModal");
+function createPElemenToVehicleItem(textP) {
+  let p = document.createElement("p")
+  p.textContent = textP
+  p.classList.add("content")
+  return p;
+}
 
-// Hace referencia al elemento <button> que cierra la ventana
-var close = document.getElementsByClassName("cerrar")[0];
+function cleanUlVehicleList(){
+  ulCarList.replaceChildren();
+}
 
-// Cuando el usuario hace click en el botón, se abre la ventana
-boton.addEventListener("click", () => {
-  modal.style.display = "block";
-});
 
-// Si el usuario hace click en el boton cerrar, la ventana se cierra
-close.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+function enterVehicle(plate, type) {
+  fetch(domain + "/api/parking/vehicle", {
+    method: 'POST',
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+    body: JSON.stringify({ plate: plate, type: type })
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .catch((err) => console.log(err))
+}
 
-// // Si el usuario hace click fuera de la ventana, se cierra.
-window.addEventListener("click", (event) => {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-});
+
+function listAllVehicles() {
+  fetch(domain + "/api/parking/vehicles")
+    .then((response) => response.json())
+    .then((dataArray) => {
+      cleanUlVehicleList();
+      dataArray.forEach(dataVehicle => {
+        let type = createPElemenToVehicleItem(dataVehicle.type);
+        let plate = createPElemenToVehicleItem(dataVehicle.plate);
+        let timeEnterVehicle = createPElemenToVehicleItem(
+          `${dataVehicle.entryDate.slice(0, 10)} - ${dataVehicle.entryDate.slice(11, 19)} `);
+        let li = document.createElement("li")
+        li.append(type, plate, timeEnterVehicle)
+        li.classList.add("vehicle")
+        ulCarList.appendChild(li)
+      });
+
+    })
+    .catch((err) => console.log(err))
+
+}
+
+enterVehicleButton.addEventListener("click", () => {
+  location.reload();
+  let type = vehicleSelectionMenu.value;
+  let plate = inputWritePlate.value;
+  enterVehicle(plate, type);
+  listAllVehicles();
+})
