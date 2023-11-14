@@ -62,16 +62,35 @@
                     <img src="img/salida-vehiculos-derecha.jpg" alt="salida de vehiculos">
                 </div>
                 <h3>Vehicles exit</h3>
-                <input type="text" placeholder="plate">
+                <input id="search-vehicle-plate" type="text" placeholder="plate">
                 <button class="boton-buscar" id="Search"> &#X1F50D; Search</button>
+
+                <section id="output-information" class="info-type-time">
+                    <div>
+                        <p class="name-list-vehicle">Tipo - Placa</p>
+                    </div>
+                    <div >
+                        <p class="name-data-vehicle">hora - entrada </p>
+                    </div>
+                    <div>
+                        <p class="name-data-vehicle">hora - salida</p>
+                    </div>
+                </section>
+
+                <section class="container-data-vehicles">
+                    <ul id="find-vehicles-list" class="vehicles" >
+                    </ul>
+                   </section>
             </div>
+          
 
         </section>
     </main>
 
      <script src="./modal.js"></script>
      <script src="./constants_id.js"></script>
-     <script src="./script.js"></script>
+     <script src="./add_vehicle.js"></script>
+     <script src="./find_vehicle.js"></script>
     
 </body>
 

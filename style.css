@@ -28,6 +28,7 @@ body {
 }
 /*informacion, titulos placa y fecha y hora */
 .info-type-time {
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
