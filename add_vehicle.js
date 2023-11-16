@@ -30,8 +30,8 @@ function listAllVehicles() {
       dataArray.forEach(dataVehicle => {
         let type = createPElemenToVehicleItem(dataVehicle.type);
         let plate = createPElemenToVehicleItem(dataVehicle.plate);
-        let timeEnterVehicle = createPElemenToVehicleItem(
-          `${dataVehicle.entryDate.slice(0, 10)} - ${dataVehicle.entryDate.slice(11, 19)} `);
+        let date = formDate(dataVehicle.entryDate)
+        let timeEnterVehicle = createPElemenToVehicleItem(formDate(date));
         let li = document.createElement("li")
         li.append(type, plate, timeEnterVehicle)
         li.classList.add("vehicle")

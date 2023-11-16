@@ -59,6 +59,24 @@ body {
   justify-content: space-around;
 }
 
+/* buscar vehiculos  */
+.info-pay {
+  margin: 20px 10px;
+}
+
+.button-pay {
+  margin-top: 10px;
+  margin-left: 90px;
+}
+
+.exit-vehicle {
+  color: white;
+  padding: 5px;
+  border: 1px solid #0d1321;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
 
 /* sombra y margen de la card */
 .card {

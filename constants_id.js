@@ -11,4 +11,5 @@ const bike = document.getElementById("bicycle");
 //id, find a vehicle 
 const inputfindPlate = document.getElementById("search-vehicle-plate");
 const searchVehicleButton = document.getElementById("Search");
-const ulFindVehicleList = document.getElementById("find-vehicles-list");
+const ulExitVehicle = document.getElementById("search-plate-list");
+const buttonPay = document.getElementById("button-pay")
