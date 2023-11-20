@@ -1,4 +1,4 @@
-listAllVehicles();
+listAllVehicles()
 
 function createPElemenToVehicleItem(textP) {
   let p = document.createElement("p")
@@ -28,6 +28,7 @@ function listAllVehicles() {
     .then((dataArray) => {
       cleanUlVehicleList();
       dataArray.forEach(dataVehicle => {
+        console.log(dataVehicle)
         let type = createPElemenToVehicleItem(dataVehicle.type);
         let plate = createPElemenToVehicleItem(dataVehicle.plate);
         let date = formDate(dataVehicle.entryDate)
@@ -44,11 +45,14 @@ function listAllVehicles() {
 }
 
 enterVehicleButton.addEventListener("click", () => {
-  location.reload()
+  console.log(listAllVehicles)
   let type = vehicleSelectionMenu.value;
   let plate = inputWritePlate.value.toUpperCase();
   enterVehicle(plate, type);
   listAllVehicles();
+  clearInput()
+  modal.style.display = "none";
+  location.reload()
 })
 
 

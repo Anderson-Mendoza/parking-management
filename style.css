@@ -78,6 +78,16 @@ body {
   flex-direction: column;
 }
 
+.exit-type-plate {
+  font-size: larger;
+}
+
+.exit-totalpay {
+  margin-top: 15px;
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
+}
 /* sombra y margen de la card */
 .card {
   width: 400px;
