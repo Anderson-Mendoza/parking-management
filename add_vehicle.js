@@ -1,3 +1,4 @@
+
 listAllVehicles()
 
 function createPElemenToVehicleItem(textP) {
@@ -28,7 +29,6 @@ function listAllVehicles() {
     .then((dataArray) => {
       cleanUlVehicleList();
       dataArray.forEach(dataVehicle => {
-        console.log(dataVehicle)
         let type = createPElemenToVehicleItem(dataVehicle.type);
         let plate = createPElemenToVehicleItem(dataVehicle.plate);
         let date = formDate(dataVehicle.entryDate)
@@ -42,10 +42,10 @@ function listAllVehicles() {
 
     })
     .catch((err) => console.log(err))
+  return ulCarList
 }
 
 enterVehicleButton.addEventListener("click", () => {
-  console.log(listAllVehicles)
   let type = vehicleSelectionMenu.value;
   let plate = inputWritePlate.value.toUpperCase();
   enterVehicle(plate, type);
@@ -53,7 +53,10 @@ enterVehicleButton.addEventListener("click", () => {
   clearInput()
   modal.style.display = "none";
   location.reload()
+
 })
+
+
 
 
 

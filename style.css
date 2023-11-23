@@ -9,6 +9,7 @@
 
 body {
   background-color: #0d1321;
+  background-image: url(./img/endless-clouds.svg);
 }
 
 .title-header {
@@ -129,6 +130,7 @@ button:hover {
 }
 
 input {
+  margin-left: 15px;
   width: 150px;
   height: 40px;
   border: 0;
@@ -160,7 +162,6 @@ input {
   width: 600px;
   padding: 40px 50px;
   border-radius: 15px;
-
   position: relative; /* Relativo con respecto al contenedor -modal- */
   margin: auto; /* Centrada */
 }
