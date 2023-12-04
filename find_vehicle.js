@@ -3,17 +3,16 @@ function formDate(date) {
   return time
 }
 
-function clearInput() {
-  inputfindPlate.value = "";
-  inputWritePlate.value = "";
+// function clearInput() {
+//   inputfindPlate.value = "";
+//   inputWritePlate.value = "";
 
-}
+// }
 
 function findVehicle(plate) {
   fetch(domain + "/api/parking/vehicle/" + plate)
     .then((response) => response.json())
     .then((arrayExitVehicle) => {
-      ulExitVehicle.replaceChildren()
       let typePlate = createPElemenToVehicleItem(
         "Type - Plate:" + " " + `${arrayExitVehicle.type} - ${arrayExitVehicle.plate}`);
       typePlate.classList.add("exit-type-plate");
@@ -32,11 +31,8 @@ function findVehicle(plate) {
 searchVehicleButton.addEventListener("click", () => {
   let plate = inputfindPlate.value.toUpperCase();
   findVehicle(plate);
-  clearInput();
+  // clearInput()
+
 });
 
-
-buttonPay.addEventListener("click", () => {
-  location.reload();
-});
 

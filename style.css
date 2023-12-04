@@ -160,40 +160,29 @@ input {
 .modal-content {
   background-color: #1d2d44;
   width: 600px;
-  padding: 40px 50px;
-  border-radius: 15px;
+  padding: 20px 50px;
   position: relative; /* Relativo con respecto al contenedor -modal- */
   margin: auto; /* Centrada */
+  display: flex;
+  flex-direction: row;
 }
 
 /* titulo del modal */
 h2 {
-  margin-bottom: 20px;
+  width: 600px;
+  height: 50px;
+  margin: auto;
   font-size: 35px;
+  background-color: #1d2d44;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /* boton de ingresar vehiculo dentro del modal */
-.boton-ingresar-vehiculo {
+.button-selection-vehicle {
   margin-left: 10px;
   padding: 0;
   font-size: 20px;
-}
-/* boton de cerrar modal */
-.cerrar {
-  margin-top: 30px;
-  margin-left: 10px;
-  padding: 0;
-  font-size: 20px;
-}
-
-.boton-buscar {
-  margin-left: 10px;
-  padding: 0;
-  font-size: 20px;
-}
-
-/* boton de seleccion de vehiculo */
-.boton-seleccion-vehiculo {
   width: 150px;
   height: 40px;
   border: 0;
@@ -202,4 +191,38 @@ h2 {
   font-size: 20px;
   padding: 0;
   outline: none;
+  display: flex;
+  flex-direction: row;
+}
+/* boton de cerrar modal */
+/* .cerrar {
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 0;
+  font-size: 20px;
+} */
+
+.boton-buscar {
+  margin-left: 10px;
+  padding: 0;
+  font-size: 20px;
+}
+
+.button-enter-vehicle {
+  margin-left: 10px;
+  margin-top: auto;
+}
+
+.form-enter {
+  display: flex;
+  flex-direction: row;
+}
+
+.warning-title {
+  margin: auto;
+  background-color: #1d2d44;
+  width: 600px;
+  padding: 20px 50px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }

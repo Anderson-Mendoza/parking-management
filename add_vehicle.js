@@ -1,4 +1,3 @@
-
 listAllVehicles()
 
 function createPElemenToVehicleItem(textP) {
@@ -6,10 +5,6 @@ function createPElemenToVehicleItem(textP) {
   p.textContent = textP
   p.classList.add("content")
   return p;
-}
-
-function cleanUlVehicleList() {
-  ulCarList.replaceChildren();
 }
 
 function enterVehicle(plate, type) {
@@ -27,35 +22,31 @@ function listAllVehicles() {
   fetch(domain + "/api/parking/vehicles")
     .then((response) => response.json())
     .then((dataArray) => {
-      cleanUlVehicleList();
+      ulCarList.replaceChildren()
       dataArray.forEach(dataVehicle => {
         let type = createPElemenToVehicleItem(dataVehicle.type);
         let plate = createPElemenToVehicleItem(dataVehicle.plate);
-        let date = formDate(dataVehicle.entryDate)
+        let date = formDate(dataVehicle.entryDate);
         let timeEnterVehicle = createPElemenToVehicleItem(formDate(date));
-        let li = document.createElement("li")
-        li.append(type, plate, timeEnterVehicle)
-        li.classList.add("vehicle")
-        ulCarList.appendChild(li)
-
+        let li = document.createElement("li");
+        li.append(type, plate, timeEnterVehicle);
+        li.classList.add("vehicle");
+        ulCarList.appendChild(li);
       });
-
     })
     .catch((err) => console.log(err))
-  return ulCarList
-}
+};
 
-enterVehicleButton.addEventListener("click", () => {
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
   let type = vehicleSelectionMenu.value;
   let plate = inputWritePlate.value.toUpperCase();
   enterVehicle(plate, type);
   listAllVehicles();
-  clearInput()
-  modal.style.display = "none";
+  // clearInput()
   location.reload()
-
-})
-
+});
 
 
 

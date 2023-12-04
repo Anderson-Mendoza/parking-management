@@ -2,7 +2,7 @@
 let modal = document.getElementById("ventanaModal");
 
 // Botón que abre el modal
-let boton = document.getElementById("abrirModal");
+let boton = document.getElementById("btnAbrirModal");
 
 // Hace referencia al elemento <button> que cierra la ventana
 //let close = document.getElementsByClassName("cerrar")[0];

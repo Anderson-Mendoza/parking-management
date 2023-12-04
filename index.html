@@ -12,25 +12,24 @@
 <body>
     <header class="title-header">
         <h1> PARKING MANAGEMENT</h1>
-        <button class="enter-button" id="abrirModal"> &#X1F698; Enter Vehicle</button>
-
+        <button class="enter-button" id="btnAbrirModal"> &#X1F698; Enter Vehicle</button>    
         <!-- Ventana modal, por defecto no visiblel -->
         <div id="ventanaModal" class="modal">
-            <div class="modal-content">
-                <h2> &#x1F697; Enter vehicles</h2>
-                <select id="boton-seleccion-vehiculo" class="boton-seleccion-vehiculo" name="boton-seleccion-vehiculo" >
+            <h2> &#x1F697; Enter vehicles</h2>
+            <div class="modal-content">       
+                <select id="button-selection-vehicle" class="button-selection-vehicle"  >
                     <option id="car" value="Car"> &#x1F697; Car</option>
                     <option id="motorcycle" value="Motorcycle"> &#x1F6F5; Motorcycle </option>
                     <!-- <option id="bicycle" value="Bicycle"> &#x1F6B4; Bicycle </option> -->
-                
-                    <form action="" method="post">
-                        <input id="ingresar-placa-vehiculo" type="text" placeholder="plate">
-                        <button id="boton-ingresar-vehiculo" class="boton-ingresar-vehiculo" > &#x1F51D; Enter</button>
-                   <!-- <button id="boton-cerrar-modal"  class="cerrar"> &#X274C; close</button> -->
-                    </form>
                 </select>
-                
+                 <form class="form-enter" id="form" >
+                    <input id="enter-plate-vehicle" type="text" placeholder="add plate">
+                    <button id="button-enter-vehicle" type="submit" class="button-enter-vehicle" > &#x1F51D; Enter</button>
+                   <!-- <button id="boton-cerrar-modal"  class="cerrar"> &#X274C; close</button> -->
+                 </form>          
             </div>
+            <p id="warning-title" class="warning-title">Add Vehicle</p>
+             
         </div>
     </header>
 
@@ -39,7 +38,7 @@
         <section class="column-1">
             <div class="card">
                 <div class="cover-card">
-                    <img src="img/entrada-vehiculos.png" alt="entrada de vehiculos">
+                    <img src="img/entrada-vehiculos.png" alt="enter of vehicles">
                 </div>
                 <h3>List vehicles</h3>
 
@@ -66,9 +65,8 @@
                     <img src="img/salida-vehiculos-derecha.jpg" alt="salida de vehiculos">
                 </div>
                 <h3>Vehicles exit</h3>
-                <input id="search-vehicle-plate" type="text" placeholder="plate">
-                <button class="boton-buscar" id="Search"> &#X1F50D; Search</button>
-
+                   <input id="search-vehicle-plate" type="text" placeholder="add plate">
+                   <button class="boton-buscar" id="Search"> &#X1F50D; Search</button>          
                 <section id="output-information" class="info-pay">
                     <ul id="search-plate-list">
                     </ul>
@@ -84,6 +82,7 @@
      <script src="./constants_id.js"></script>
      <script src="./add_vehicle.js"></script>
      <script src="./find_vehicle.js"></script>
+     <script src="./exit_vehicle.js"></script>
     
 </body>
 
